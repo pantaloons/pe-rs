@@ -17,12 +17,12 @@ extern crate lazy_static;
 extern crate bitflags;
 
 pub mod types;
-mod utility;
+pub mod utility;
 
 use std::mem::{transmute,size_of};
 
 use types::*;
-use utility::{RefSafe,URP,URPConvert,FPRef};
+pub use utility::{RefSafe,URP,URPConvert,FPRef};
 pub use utility::{FP,RVA,CChar,Error,Result,AsOsStr};
 
 #[cfg(target_endian="big")] const E:ENDIANNESS_NOT_SUPPORTED=();
